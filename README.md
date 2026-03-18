@@ -3,8 +3,10 @@
 
 There are several events in Battle Brothers that may reward a brother if you are lucky enough. This mod gives you the control to guarantee any or all of those event outcomes. 
 
-## Note
-This is a game changing mod. If you want to stay with Vanilla game behavior and logic, this is not the mod for you.
+## Important
+* This is a game changing mod. If you want to stay with Vanilla game behavior and logic, this is not the mod for you.
+* The "Guaranteed" part of the title does not force the event bro events listed here to fire. They have the same 'score' as before. The events must fire in a normal raffle-ticket like manner first. Once one of the below events is picked, Then you can guarantee that the brother joins you.
+* Several of the events here require that you have an open space in your company roster. If you have no open roster slots, the events will a. not fire or b. not give you a brother.
   
 ## How does it work?
 * Using MSU Settings "Mod Settings" panel, you can decide which event bro events you want to modify.
