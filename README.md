@@ -1,1 +1,36 @@
-# guaranteed_event-bros
+# Guaranteed Event Bros
+### A Battle Brothers mod to change the outcome of several in-game events.
+
+There are several events in Battle Brothers that may reward a brother if you are lucky enough. This mod gives you the control to guarantee any or all of those event outcomes. 
+
+## Note
+This is a game changing mod. If you want to stay with Vanilla game behavior and logic, this is not the mod for you.
+  
+## How does it work?
+* Using MSU Settings "Mod Settings" panel, you can decide which event bro events you want to modify.
+  * By default, all event outcomes are enabled.
+ 
+## Why did you create this?
+* I really enjoy playing no-town challenge runs. One of the biggest aspects of that challenge is recruiting brothers through events. Through this mod, I intend to make it so that all event bro events can guarantee a brother.
+
+## What are the events?
+* Runaway Laborers
+  * Vanilla - 70%
+* Thief Caught
+  * Vanilla - 2 75% checks, or 56.25%
+* The Horseman
+  * Vanilla - 75%
+* [Anatomist Background Only!] Blighted Guy
+  * Vanilla - 50%
+
+## Pre-reqs?
+* Battle Brothers 1.5.1.6 or later
+* MSU 1.3.0 or later
+* Modern Hooks 0.4.10 or later
+
+## Compatability?
+* You can add or remove this mod whenever you want.
+
+## Uninstallation
+* This mod has to update the events that are stored in the Event Manager, which is stored in your save file.
+* BEFORE removing the mod from your data folder, if you want to put the event chances back to vanilla settings, you Must go to the Mod Settings menu and disable all four (or whatever you want the default to become) events, Save the changes, save your game. Then remove the mod. 
