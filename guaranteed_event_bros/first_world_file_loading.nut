@@ -1,0 +1,1 @@
+::includeFiles(::IO.enumerateFiles("guaranteed_event_bros/first_world_init_game_hooks"));
