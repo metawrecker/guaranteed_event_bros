@@ -3,7 +3,7 @@
 	Name = "Guaranteed Event Bros",
 	Version = "1.0.0",
 	GitHubUrl = "https://github.com/metawrecker/guaranteed_event_bros",
-	NexusUrl = "",
+	NexusUrl = "https://www.nexusmods.com/battlebrothers/mods/982",
 	GameLoading = true
 }
 
@@ -74,7 +74,7 @@ foreach (mod in requiredMods) {
  	local mod = ::MSU.Class.Mod(::GuaranteedEventBros.ID, ::GuaranteedEventBros.Version, ::GuaranteedEventBros.Name);
 	::GuaranteedEventBros.Mod <- mod;
 
-	// ::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.NexusMods, ::GuaranteedEventBros.NexusUrl);
+	::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.NexusMods, ::GuaranteedEventBros.NexusUrl);
 	::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, ::GuaranteedEventBros.GitHubUrl);
 	::GuaranteedEventBros.Mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
 
