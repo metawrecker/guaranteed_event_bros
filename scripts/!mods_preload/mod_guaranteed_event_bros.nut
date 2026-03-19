@@ -3,7 +3,7 @@
 	Name = "Guaranteed Event Bros",
 	Version = "1.0.0",
 	GitHubUrl = "https://github.com/metawrecker/guaranteed_event_bros",
-	NexusUrl = "",
+	NexusUrl = "https://www.nexusmods.com/battlebrothers/mods/982",
 	GameLoading = true
 }
 
@@ -32,51 +32,51 @@ foreach (mod in requiredMods) {
 	::GuaranteedEventBros.EventUtils.updateEvent(eventId, set100Percent);
 }
 
-::GuaranteedEventBros.fireTestEvent <- function ()
-{
-	::logInfo("Firing a test event!");
+// ::GuaranteedEventBros.fireTestEvent <- function ()
+// {
+// 	::logInfo("Firing a test event!");
 
-	local eventManager = ::World.Events;
-	local testEventIds = [
-		"event.runaway_laborers",
-		"event.thief_caught",
-		"event.the_horseman"
-	];
+// 	local eventManager = ::World.Events;
+// 	local testEventIds = [
+// 		"event.runaway_laborers",
+// 		"event.thief_caught",
+// 		"event.the_horseman"
+// 	];
 
-	if (this.World.Assets.getOrigin().getID() == "scenario.anatomists")
-	{
-		testEventIds.append("event.anatomist_helps_blighted_guy_1");
-	}
+// 	if (this.World.Assets.getOrigin().getID() == "scenario.anatomists")
+// 	{
+// 		testEventIds.append("event.anatomist_helps_blighted_guy_1");
+// 	}
 
-	local selectedEventId = "";
+// 	local selectedEventId = "";
 
-	foreach (eventId in testEventIds) {
-		local event = eventManager.getEvent(eventId);
+// 	foreach (eventId in testEventIds) {
+// 		local event = eventManager.getEvent(eventId);
 
-		event.update();
+// 		event.update();
 
-		::logInfo("checking " + event.getTitle());
+// 		::logInfo("checking " + event.getTitle());
 
-		if (event.m.Score == 0) {
-			continue;
-		}
+// 		if (event.m.Score == 0) {
+// 			continue;
+// 		}
 
-		selectedEventId = eventId;
-	}
+// 		selectedEventId = eventId;
+// 	}
 
-	if (selectedEventId != "") {
-		::logInfo("Trying to fire " + selectedEventId);
-		eventManager.fire(selectedEventId);
-	}
-}
+// 	if (selectedEventId != "") {
+// 		::logInfo("Trying to fire " + selectedEventId);
+// 		eventManager.fire(selectedEventId);
+// 	}
+// }
 
 ::GuaranteedEventBros.HooksMod.queue(modLoadOrder, function() {
  	local mod = ::MSU.Class.Mod(::GuaranteedEventBros.ID, ::GuaranteedEventBros.Version, ::GuaranteedEventBros.Name);
 	::GuaranteedEventBros.Mod <- mod;
 
-	// ::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.NexusMods, ::GuaranteedEventBros.NexusUrl);
+	::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.NexusMods, ::GuaranteedEventBros.NexusUrl);
 	::GuaranteedEventBros.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, ::GuaranteedEventBros.GitHubUrl);
-	// ::GuaranteedEventBros.Mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
+	::GuaranteedEventBros.Mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
 
 	::include("guaranteed_event_bros/normal_file_loading");
 }); // ::Hooks.QueueBucket.Normal

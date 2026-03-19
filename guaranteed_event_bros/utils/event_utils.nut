@@ -211,13 +211,13 @@
 			newContent = eventContent.Vanilla;
 		}
 
-		::logInfo("Updating event: " + eventId + " to " + logText);
-
 		eventScreens[eventContent.ScreenIndex].Options[eventContent.OptionsIndex] = newContent
 
 		if ("ModdedOutput" in eventScreens[eventContent.ScreenIndex].Options[eventContent.OptionsIndex] &&
 			eventScreens[eventContent.ScreenIndex].Options[eventContent.OptionsIndex].ModdedOutput == true) {
-			::logInfo("Confirmed event has been updated to modded setting.");
+			//::logInfo("Confirmed event has been updated to modded setting.");
 		}
+
+		::logInfo("event: " + eventId + " updated to " + logText);
 	}
 }
